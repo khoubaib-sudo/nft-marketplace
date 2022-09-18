@@ -34,13 +34,18 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
+                <div className="flex flex-shrink-0 items-center">
+                    <img className="block h-8 w-auto lg:hidden" src="/images/page_logo.png" alt="Your Company"/>
+                    <img className="hidden h-8 w-auto lg:block" src="/images/page_logo.png" alt="Your Company"/>
+                </div>
+                {/* <div className="flex-shrink-0 flex items-center">
                   <img
                     className="hidden lg:block h-10 w-auto"
                     src="/images/page_logo.png"
                     alt="Workflow"
                   />
-                </div>
+                </div> */}
+                
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
