@@ -1,6 +1,7 @@
-import type { NextPage } from 'next'
-import { NftList } from '../components'
-import BaseLayout from '../components/layout/BaseLayout'
+import type { NextPage } from 'next';
+import { NftList } from '../components';
+import BaseLayout from '../components/layout/BaseLayout';
+import nfts from "../content/meta.json"
 
 
 
@@ -18,7 +19,9 @@ const Home: NextPage = (props: any) => {
               Mint a NFT to get unlimited ownership forever!
             </p>
           </div>
-          <NftList />
+          <NftList 
+            nfts={nfts}
+          />
         </div>
       </div>
     </BaseLayout>
