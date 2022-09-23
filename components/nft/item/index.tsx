@@ -34,7 +34,7 @@ const NftItem: FunctionComponent<NftItemPoprs> = ({item}) => {
                       <dd className="order-1 text-xl font-extrabold text-indigo-600">
                         <div className="flex justify-center items-center">
                            100   
-                          <img className="h-6" src="/images/small-eth.png" alt="ether icon"/>
+                          <img className="h-4" src="/images/small-eth.png" alt="ether icon"/>
                         </div>
                       </dd>
                     </div>
