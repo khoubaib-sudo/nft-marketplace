@@ -1,0 +1,1 @@
+export {default as Web3Provaider} from "./web3/index"

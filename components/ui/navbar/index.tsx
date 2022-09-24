@@ -82,7 +82,7 @@ export default function Navbar() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src="https://scontent.ftun15-1.fna.fbcdn.net/v/t1.6435-9/90618760_2625973931007782_5512017970915704832_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_ohc=vy75zge_9RgAX_qbuKg&_nc_ht=scontent.ftun15-1.fna&oh=00_AT_VP8jzQzDUHmR3zW31Wrlc86adxS0dcZXQfJuuy9iKhw&oe=63527AD6"
                         alt=""
                       />
                     </Menu.Button>
