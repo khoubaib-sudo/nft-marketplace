@@ -1,19 +1,27 @@
-import { createContext, FunctionComponent, useState, useContext} from "react";
-import { creatDafaultState, Web3State } from "./utils";
+import { createContext, FunctionComponent, useState, useContext, useEffect} from "react";
+import { createDefaultState, Web3State } from "./utils";
 
 
-
-
-
-
-const Web3Context = createContext<Web3State>(creatDafaultState());
+const Web3Context = createContext<Web3State>(createDefaultState());
 
 type Web3Providerprops = {
     children: React.ReactNode; //👈 children prop type
 };
 
 const Web3Provider = ({children} : Web3Providerprops) => {
-    const [web3Api , setWeb3Api] = useState<Web3State>(creatDafaultState())
+    const [web3Api , setWeb3Api] = useState<Web3State>(createDefaultState());
+    useEffect(() => {
+        function initWeb3(){
+            setWeb3Api({
+                ethereum: window.ethereum,
+                provider: null,
+                contract: null,
+                isLoading : false
+            })
+
+        }
+        initWeb3();
+    }, [])
     return(
         <Web3Context.Provider value = {web3Api}>
             {children}
