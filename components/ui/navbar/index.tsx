@@ -3,6 +3,7 @@
 
 import { Disclosure, Menu } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useAccount } from '@hooks';
 import Link from 'next/link'
 import ActiveLink from '../link'
 
@@ -17,6 +18,10 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+
+  const { data } = useAccount("Some Random Params");
+  console.log(data);
+  
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
