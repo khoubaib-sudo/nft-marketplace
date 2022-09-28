@@ -8,8 +8,15 @@ import { useWeb3 } from '@providers/web3';
 
 const Home: NextPage = () => {
   const {provider, contract} = useWeb3();
-  console.log(contract);
 
+  const getNftInfo = async () => {
+    console.log(await contract!.name());
+    console.log(await contract!.symbol());
+  }
+
+  if (contract) {
+    getNftInfo();
+  }
 
   const getAccounts = async () => {
     const accounts = await provider!.listAccounts();
@@ -20,7 +27,7 @@ const Home: NextPage = () => {
     getAccounts();
   }
 
-  
+
   return (
     <BaseLayout>
     
