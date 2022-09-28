@@ -6,11 +6,11 @@ import { useWeb3 } from '@providers/web3';
 
 
 
-const Home: NextPage = (props: any) => {
+const Home: NextPage = () => {
   const {provider} = useWeb3();
 
 
-  const getAccounts = async () =>{
+  const getAccounts = async () => {
     const accounts = await provider!.listAccounts();
     console.log(accounts[0]);
   }

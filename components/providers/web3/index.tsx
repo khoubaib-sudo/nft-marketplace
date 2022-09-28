@@ -11,6 +11,7 @@ type Web3Providerprops = {
 
 const Web3Provider = ({children} : Web3Providerprops) => {
     const [web3Api , setWeb3Api] = useState<Web3State>(createDefaultState());
+    
     useEffect(() => {
         function initWeb3(){
 
@@ -37,6 +38,7 @@ const Web3Provider = ({children} : Web3Providerprops) => {
 
 export function useWeb3 () {
     return useContext (Web3Context);
+
 }
  
 export default Web3Provider;

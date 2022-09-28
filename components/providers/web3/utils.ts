@@ -26,4 +26,4 @@ export const createDefaultState = () => {
     contract: null,
     isLoading: true,
   }
-}
+} 
