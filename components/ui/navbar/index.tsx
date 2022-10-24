@@ -3,6 +3,7 @@
 
 import { Disclosure, Menu } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useAccount } from '@hooks/web3';
 import { useWeb3 } from '@providers/web3';
 import { isValidAddress } from 'ethereumjs-util';
 import Link from 'next/link'
@@ -20,9 +21,8 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
 
-  const { hooks } = useWeb3();
-  const { data } = hooks.useAccount("");
-  console.log(data);
+  const { account } = useAccount();
+  console.log(account.data);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
