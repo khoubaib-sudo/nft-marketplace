@@ -18,9 +18,8 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
-
   const { account } = useAccount();
-  console.log(account.data);
+  
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
