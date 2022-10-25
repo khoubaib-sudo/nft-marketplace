@@ -20,6 +20,9 @@ function classNames(...classes: string[]) {
 export default function Navbar() {
   const { account } = useAccount();
   
+  console.log("is loading", account.isLoading);
+  console.log("is installed", account.isInstalled);
+  
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
