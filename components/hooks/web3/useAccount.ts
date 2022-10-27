@@ -23,10 +23,10 @@ export const hookFactory: AccountHookFactory = ({provider, ethereum,isLoading}) 
       if (!account){
         throw "cannot retreive account! Connect to Web3 wallet"
       }
-      
       return account;
     },{
-      revalidateOnFocus: false
+      revalidateOnFocus: false,
+      shouldRetryOnError : false
     }
   )
   

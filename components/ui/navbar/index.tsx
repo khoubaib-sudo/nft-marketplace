@@ -81,7 +81,7 @@ export default function Navbar() {
                       "Loading..." :
                       account.isInstalled ?
                       network.data :
-                      "Insatall Web3 wallet  "
+                      "Insatall Web3 wallet   "
                     }
                   </span>
               </div>
