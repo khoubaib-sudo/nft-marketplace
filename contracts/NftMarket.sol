@@ -13,9 +13,12 @@ contract NftMarket is ERC721URIStorage {
   function mintToken(string memory tokenURI) public payable returns (uint) {
     _tokenIds.increment();
     _listedItems.increment();
+    
     uint newTokenId = _tokenIds.current();
+    
     _safeMint(msg.sender, newTokenId);
     _setTokenURI(newTokenId, tokenURI);
+    
     return newTokenId; 
   }
 }
