@@ -3,8 +3,18 @@ import { createDefaultState, createWeb3State, loadContract, Web3State } from "./
 import { ethers } from "ethers";
 import { MetaMaskInpageProvider } from "@metamask/providers";
 
-function pageReload(){
-    window.location.reload();
+const pageReload = () => {window.location.reload(); }
+const handleAccounts = (ethereum: MetaMaskInpageProvider) => async () => {
+    const isLocked = !(await ethereum._metamask.isUnlocked()); 
+    if (isLocked) {pageReload(); }
+}
+const setGlobalListeners = (ethereum: MetaMaskInpageProvider) => {
+    ethereum.on("chainChanged", pageReload);
+    ethereum.on("accountsChanged",handleAccounts(ethereum))
+}
+const removeGlobalListners = (ethereum: MetaMaskInpageProvider) => {
+    ethereum.removeListener("chainChanged", pageReload);
+    ethereum.removeListener("accountsChanged",handleAccounts)
 }
 
 const Web3Context = createContext<Web3State>(createDefaultState());
@@ -40,12 +50,6 @@ const Web3Provider = ({children} : Web3Providerprops) => {
         return () => removeGlobalListners(window.ethereum);
         }, [])
         
-        const setGlobalListeners = (ethereum: MetaMaskInpageProvider) => {
-            ethereum.on("chainChanged", pageReload);
-        }
-        const removeGlobalListners = (ethereum: MetaMaskInpageProvider) => {
-            ethereum.removeListener("chainChanged", pageReload);
-        }
         
         return(
         <Web3Context.Provider value = {web3Api}>
