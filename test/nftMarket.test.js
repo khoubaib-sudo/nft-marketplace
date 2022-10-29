@@ -1,5 +1,6 @@
 
 
+
 const NftMarket = artifacts.require("NftMarket");
 
 contract("NftMarket", accounts => {
@@ -10,9 +11,16 @@ contract("NftMarket", accounts => {
         console.log(accounts)
     })
     describe("Mint token", () => {
-        it("should resolve into true value", () => {
-            let numberOfNfts =12;
-            assert(numberOfNfts == 12, "Value is NOT true")
+        const tokenURI = "https://test.com";
+        before(async() => {
+            await _contract.mintToken(tokenURI, {
+                from:accounts[0]
+            })
+        })
+        it("owner of the first token should be address0 ",async () => {
+            const owner = await _contract.ownerOf(1);
+            // assert(owner == accounts[0] , "owner of token is not matching address 0");
+            assert.equal(owner, accounts[0], "owner of token is not matching address 0");
         })
     })
 })
