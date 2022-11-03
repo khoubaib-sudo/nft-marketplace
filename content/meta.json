@@ -1,7 +1,7 @@
 [{
     "description": "Fierce violet creature. Very durable and tanky.",
     "image": "https://blog.mexc.com/wp-content/uploads/2022/08/Doodles-NFT-1.png",
-    "name": "violet Creature #1",
+    "name": "french dude #1",
     "attributes": [
       {
         "trait_type": "attack",
@@ -19,7 +19,7 @@
   },{
     "description": "Fierce blueish creature. Avarage in attack and speed.",
     "image": "https://pbs.twimg.com/media/E9fkJnCXEAUr4nr?format=jpg&name=small",
-    "name": "bleu Creature #2",
+    "name": "sad dude #2",
     "attributes": [
       {
         "trait_type": "attack",
@@ -37,7 +37,7 @@
     },{
     "description": "Fierce violet creature. Very durable and tanky.",
     "image": "https://ipfs.moralis.io:2053/ipfs/QmTRwnjrVSnSRdjjxAuyP53L3FXFvVPp726ts8Xde5iqen",
-    "name": "violet Creature #1",
+    "name": "sparkling dude #1",
     "attributes": [
       {
         "trait_type": "attack",
@@ -55,7 +55,43 @@
   },{
     "description": "Fierce blueish creature. Avarage in attack and speed.",
     "image": "https://images.squarespace-cdn.com/content/v1/61ac9cf1e52ca44ca9f17a09/d34ee92e-cb24-4cc2-ac69-89be58803d95/Doodles.gif",
-    "name": "bleu Creature #2",
+    "name": "hoddy dude #2",
+    "attributes": [
+      {
+        "trait_type": "attack",
+        "value": "40"
+      },
+      {
+        "trait_type": "health",
+        "value": "80"
+      },
+      {
+        "trait_type": "speed",
+        "value": "50"
+      }
+    ]
+  },{
+    "description": "Fierce blueish creature. Avarage in attack and speed.",
+    "image": "https://res.cloudinary.com/coin-nft/image/upload/c_limit%2Cq_auto%2Cw_569/f_auto/v1/cache/1/92/7b/927b39c196ff651eedb175cd69da153d40ab5a2058fbcb94a2fcefea9990bacd-MWE1OTAxOWYtOTcwNS00ODkxLWI0MzQtNzA2ZGUzYzg4OGYw?_a=ATCkFAA0",
+    "name": "verified dude #2",
+    "attributes": [
+      {
+        "trait_type": "attack",
+        "value": "40"
+      },
+      {
+        "trait_type": "health",
+        "value": "80"
+      },
+      {
+        "trait_type": "speed",
+        "value": "50"
+      }
+    ]
+  },{
+    "description": "Fierce blueish creature. Avarage in attack and speed.",
+    "image": "https://media.giphy.com/media/XpLdhYseuf3mtwJ5Zy/giphy.gif",
+    "name": "dude dude #2",
     "attributes": [
       {
         "trait_type": "attack",
