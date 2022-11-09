@@ -1,0 +1,19 @@
+{
+  "description": "Wow",
+  "image": "https://gateway.pinata.cloud/ipfs/Qmb5cAQhiyyajhEjjCadSt4gRz5pheV1hNiJZVjftqiyRt",
+  "name": "DUDE  #3",
+  "attributes": [
+    {
+      "trait_type": "attack",
+      "value": "20"
+    },
+    {
+      "trait_type": "health",
+      "value": "100"
+    },
+    {
+      "trait_type": "speed",
+      "value": "30"
+    }
+  ]
+}
