@@ -1,8 +1,8 @@
 import {FunctionComponent} from "react"
-import {NftMeta} from "../../../../types/nft"
+import {Nft} from "../../../../types/nft"
 
 type NftItemPoprs = {
-  item : NftMeta;
+  item : Nft;
 }
 
 
@@ -12,7 +12,7 @@ const NftItem: FunctionComponent<NftItemPoprs> = ({item}) => {
             <div className="flex-shrink-0">
                 <img
                   className={`h-full w-full object-cover`}
-                  src={item.image}
+                  src={item.meta.image}
                   alt="New NFT"
                 />
               </div>
@@ -22,8 +22,8 @@ const NftItem: FunctionComponent<NftItemPoprs> = ({item}) => {
                     Creatures NFT
                   </p>
                   <div className="block mt-2">
-                    <p className="text-xl font-semibold text-gray-900">{item.name}</p>
-                    <p className="mt-3 mb-3 text-base text-gray-500">{item.description}</p>
+                    <p className="text-xl font-semibold text-gray-900">{item.meta.name}</p>
+                    <p className="mt-3 mb-3 text-base text-gray-500">{item.meta.description}</p>
                   </div>
                 </div>
                 
@@ -38,7 +38,7 @@ const NftItem: FunctionComponent<NftItemPoprs> = ({item}) => {
                         </div>
                       </dd>
                     </div>
-                    {item.attributes.map(attribute=>                     
+                    {item.meta.attributes.map(attribute=>                     
                       <div key ={attribute.trait_type}className="flex flex-col px-4 pt-4">
                         <dt className="order-2 text-sm font-medium text-gray-500">{attribute.trait_type}</dt>
                         <dd className="order-1 text-xl font-extrabold text-indigo-600">{attribute.value}</dd>
