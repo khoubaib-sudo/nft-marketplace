@@ -34,7 +34,9 @@ const Web3Provider = ({children} : Web3Providerprops) => {
                 const contract = await loadContract("NftMarket", provider);
                 const signer = provider.getSigner();
                 const signedContract = contract.connect(signer);
-                setGlobalListeners(window.ethereum);
+                
+                setTimeout(() => setGlobalListeners(window.ethereum), 500);
+                
                 setWeb3Api(createWeb3State({
                 ethereum: window.ethereum,
                 provider,
