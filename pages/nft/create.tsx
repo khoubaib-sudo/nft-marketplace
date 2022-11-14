@@ -49,7 +49,12 @@ const NftCreate: NextPage = () => {
         method: "personal_sign",
         params: [JSON.stringify(messageToSign.data), account, messageToSign.data.id]
       })
-      console.log(signedData);
+      await axios.post("/api/verify", {
+        address: account,
+        signature: signedData,
+        nft: nftMeta
+      })
+      // console.log(signedData);
       // console.log(messageToSign)
     } catch (e: any) {
       console.error(e.message);
